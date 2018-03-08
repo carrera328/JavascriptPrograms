@@ -1,0 +1,21 @@
+body {
+    background-color:silver;
+}
+
+#search {
+    margin-top: 5%;
+    display:block;
+}
+
+#input {
+    width:60%;
+}
+
+body {
+  font-family: Times;
+}
+
+img {
+  height: 100px;
+
+}
