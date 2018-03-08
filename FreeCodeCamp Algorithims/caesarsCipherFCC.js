@@ -10,24 +10,24 @@ Write a function which takes a ROT13 encoded string as input and returns a decod
 All letters will be uppercase. Do not transform any non-alphabetic character (i.e. spaces, punctuation), but do pass them on.
 */
 
-function rot13(str) { // LBH QVQ VG!
-  var new_str = "";
-  // iterate through string
+function rot13(str) {
+  var newStr = "";
+  
   for(var i = 0; i < str.length; i++) {
-    // strings are immutable so a new one was created
+    
     var code = str[i].charCodeAt();
     // checking if 
     if(code < 65 || code > 90) {
-      new_str += str[i];
+      newStr += str[i];
     }
     else if(code <= 77) {
-      new_str += String.fromCharCode(code + 13);
+      newStr += String.fromCharCode(code + 13);
     }
     else{
-      new_str += String.fromCharCode( code - 13);
+      newStr += String.fromCharCode( code - 13);
     }
   }
-  return new_str;
+  return newStr;
 } 
 
 console.log(rot13("SERR PBQR PNZC"));
